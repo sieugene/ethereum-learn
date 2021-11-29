@@ -7019,7 +7019,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       var elliptic = exports;
 
-      elliptic.version = require('../package.json').version;
+      elliptic.version = require('../../package.json').version;
       elliptic.utils = require('./elliptic/utils');
       elliptic.rand = require('brorand');
       elliptic.curve = require('./elliptic/curve');
@@ -13770,7 +13770,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         }
       }).call(this, require('_process'), typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
     }, { "_process": 122, "randombytes": 133, "safe-buffer": 149 }], 135: [function (require, module, exports) {
-      module.exports = require('./lib/_stream_duplex.js');
+      module.exports = require('./lib/_stream_duplex.js.js');
     }, { "./lib/_stream_duplex.js": 136 }], 136: [function (require, module, exports) {
       // Copyright Joyent, Inc. and other Node contributors.
       //
@@ -16042,17 +16042,17 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     }, { "events": 84 }], 144: [function (require, module, exports) {
       module.exports = require('./readable').PassThrough;
     }, { "./readable": 145 }], 145: [function (require, module, exports) {
-      exports = module.exports = require('./lib/_stream_readable.js');
+      exports = module.exports = require('./lib/_stream_readable.js.js');
       exports.Stream = exports;
       exports.Readable = exports;
-      exports.Writable = require('./lib/_stream_writable.js');
-      exports.Duplex = require('./lib/_stream_duplex.js');
-      exports.Transform = require('./lib/_stream_transform.js');
-      exports.PassThrough = require('./lib/_stream_passthrough.js');
+      exports.Writable = require('./lib/_stream_writable.js.js');
+      exports.Duplex = require('./lib/_stream_duplex.js.js');
+      exports.Transform = require('./lib/_stream_transform.js.js');
+      exports.PassThrough = require('./lib/_stream_passthrough.js.js');
     }, { "./lib/_stream_duplex.js": 136, "./lib/_stream_passthrough.js": 137, "./lib/_stream_readable.js": 138, "./lib/_stream_transform.js": 139, "./lib/_stream_writable.js": 140 }], 146: [function (require, module, exports) {
       module.exports = require('./readable').Transform;
     }, { "./readable": 145 }], 147: [function (require, module, exports) {
-      module.exports = require('./lib/_stream_writable.js');
+      module.exports = require('./lib/_stream_writable.js.js');
     }, { "./lib/_stream_writable.js": 140 }], 148: [function (require, module, exports) {
       'use strict';
 
@@ -19262,7 +19262,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         chunksOf: chunksOf
       };
     }, {}], 173: [function (require, module, exports) {
-      var A = require("./array.js");
+      var A = require("./array.js.js");
 
       var at = function at(bytes, index) {
         return parseInt(bytes.slice(index * 2 + 2, index * 2 + 4), 16);
@@ -20208,8 +20208,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       var downloadUrl = null;
       var request = require("xhr-request-promise");
       var bytes = require("eth-lib/lib/bytes");
-      var hash = require("./swarm-hash.js");
-      var pick = require("./pick.js");
+      var hash = require("./swarm-hash.js.js");
+      var pick = require("./pick.js.js");
       var swarm = require("./swarm");
 
       module.exports = swarm({
@@ -22571,10 +22571,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       var queryString = require('query-string');
       var setQuery = require('url-set-query');
       var assign = require('object-assign');
-      var ensureHeader = require('./lib/ensure-header.js');
+      var ensureHeader = require('./lib/ensure-header.js.js');
 
       // this is replaced in the browser
-      var request = require('./lib/request.js');
+      var request = require('./lib/request.js.js');
 
       var mimeTypeJson = 'application/json';
       var noop = function noop() {};
@@ -24712,9 +24712,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       var _ = require('underscore');
       var errors = require('web3-core-helpers').errors;
-      var Jsonrpc = require('./jsonrpc.js');
-      var BatchManager = require('./batch.js');
-      var givenProvider = require('./givenProvider.js');
+      var Jsonrpc = require('./jsonrpc.js.js');
+      var BatchManager = require('./batch.js.js');
+      var givenProvider = require('./givenProvider.js.js');
 
       /**
       * It's responsible for passing messages to providers
@@ -25030,7 +25030,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       "use strict";
 
-      var Subscription = require('./subscription.js');
+      var Subscription = require('./subscription.js.js');
 
       var Subscriptions = function Subscriptions(options) {
         this.name = options.name;
@@ -25476,7 +25476,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       "use strict";
 
       var requestManager = require('web3-core-requestmanager');
-      var extend = require('./extend.js');
+      var extend = require('./extend.js.js');
 
       module.exports = {
         packageInit: function packageInit(pkg, args) {
@@ -29589,7 +29589,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
        * @date 2015
        */
 
-      var formatters = require('./formatters.js');
+      var formatters = require('./formatters.js.js');
 
       /**
        * SolidityParam object prototype.
@@ -38943,7 +38943,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       var Accounts = require('web3-eth-accounts');
       var abi = require('web3-eth-abi');
 
-      var getNetworkType = require('./getNetworkType.js');
+      var getNetworkType = require('./getNetworkType.js.js');
       var formatter = helpers.formatters;
 
       var blockCall = function blockCall(args) {
@@ -43970,7 +43970,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       module.exports = require('crypto');
     }, { "crypto": 402 }], 404: [function (require, module, exports) {
       var randomHex = function randomHex(size, callback) {
-        var crypto = require('./crypto.js');
+        var crypto = require('./crypto.js.js');
         var isCallback = typeof callback === 'function';
 
         if (size > 65536) {
@@ -44318,8 +44318,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       var _ = require('underscore');
       var ethjsUnit = require('ethjs-unit');
-      var utils = require('./utils.js');
-      var soliditySha3 = require('./soliditySha3.js');
+      var utils = require('./utils.js.js');
+      var soliditySha3 = require('./soliditySha3.js.js');
       var randomHex = require('randomhex');
 
       /**
@@ -44621,7 +44621,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       var _ = require('underscore');
       var BN = require('bn.js');
-      var utils = require('./utils.js');
+      var utils = require('./utils.js.js');
 
       var _elementaryName = function _elementaryName(name) {
         /*jshint maxcomplexity:false */
@@ -45366,7 +45366,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
       "use strict";
 
-      var version = require('../package.json').version;
+      var version = require('../../package.json').version;
       var core = require('web3-core');
       var Eth = require('web3-eth');
       var Net = require('web3-net');
